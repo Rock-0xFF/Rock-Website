@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rock Lee</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* التنسيق الأساسي (متوافق مع الصفحة الرئيسية) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* زر الرجوع للخلف */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #8b949e;
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            color: #00ff7f;
+            transform: translateX(-5px);
+        }
+
+        /* بطاقة العنوان الرئيسي */
+        .contact-header {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon-main {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 127, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 127, 0.1);
+        }
+
+        .icon-main span {
+            color: #00ff7f;
+            font-size: 32px;
+        }
+
+        .contact-header h1 {
+            margin: 0;
+            color: #00ff7f;
+            font-size: 2rem;
+        }
+
+        .contact-header p {
+            color: #8b949e;
+            margin: 5px 0 0;
+        }
+
+        /* شبكة روابط التواصل */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* تصميم بطاقة الرابط */
+        .contact-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            height: 100%; /* لضمان تساوي الارتفاع */
+            box-sizing: border-box;
+        }
+
+        .contact-card:hover {
+            border-color: #00ff7f;
+            background: #1c2128;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* حاوية الأيقونة الخاصة بالمنصة */
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        /* ألوان المنصات */
+        .github-icon { background: #24292e; color: #fff; }
+        .x-icon { background: #000000; color: #fff; border: 1px solid #30363d; }
+        .telegram-icon { background: #229ED9; color: #fff; }
+
+        .contact-card h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-card .username {
+            color: #00ff7f;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-card .desc {
+            color: #8b949e;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-top: auto; /* دفع الوصف للأسفل */
+        }
+
+        /* التجاوب مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-header { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <a href="index.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+            Back to Home
+        </a>
+
+        <header class="contact-header">
+            <div class="icon-main"><span class="material-icons">alternate_email</span></div>
+            <div>
+                <h1>Let's Connect</h1>
+                <p>Feel free to reach out for collaborations or technical discussions.</p>
+            </div>
+        </header>
+
+        <nav class="contact-grid">
+            
+            <a href="https://github.com/Rock-0xFF" target="_blank" class="contact-card">
+                <div class="platform-icon github-icon">
+                    <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+                </div>
+                <h2>GitHub</h2>
+                <span class="username">Rock-0xFF</span>
+                <span class="desc">Code repositories, tools, and security research.</span>
+            </a>
+
+            <a href="https://x.com/msf6_Exploit" target="_blank" class="contact-card">
+                <div class="platform-icon x-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </div>
+                <h2>X (Twitter)</h2>
+                <span class="username">@msf6_Exploit</span>
+                <span class="desc">Technical updates, short write-ups, and discussions.</span>
+            </a>
+
+            <a href="https://t.me/Rock_EX" target="_blank" class="contact-card">
+                <div class="platform-icon telegram-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.12 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-.99.53-1.41.52-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.38-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"></path></svg>
+                </div>
+                <h2>Telegram</h2>
+                <span class="username">@Rock_EX</span>
+                <span class="desc">Fastest way to reach me for direct messaging.</span>
+            </a>
+
+        </nav>
+    </div>
+
+</body>
+</html>
