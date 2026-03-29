@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Rock</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+       
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; 
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #8b949e; 
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            color: #00ff7f; 
+            transform: translateX(-5px);
+        }
+
+        
+        .page-header {
+            background: #161b22; 
+            border: 1px solid #30363d; 
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon-main {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 127, 0.1); 
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 127, 0.1);
+        }
+
+        .icon-main span {
+            color: #00ff7f; 
+            font-size: 32px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            color: #00ff7f; 
+            font-size: 2rem;
+        }
+
+        .page-header p {
+            color: #8b949e;
+            margin: 5px 0 0;
+        }
+
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+            box-sizing: border-box;
+            position: relative; 
+        }
+
+        .project-card:hover {
+            border-color: #00ff7f; 
+            background: #1c2128; 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 255, 127, 0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(32, 38, 45, 1);
+        }
+
+        .project-icon span {
+            color: #00ff7f;
+            font-size: 24px;
+        }
+
+        .project-category {
+            font-size: 0.75rem;
+            color: #00ff7f;
+            background: rgba(0, 255, 127, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-card h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .project-card .desc {
+            color: #8b949e;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            flex-grow: 1; 
+        }
+
+        
+        .project-actions {
+            margin-top: auto; 
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: 0.2s;
+            font-weight: 600;
+        }
+
+        
+        .github-btn {
+            background: #21262d; 
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+        }
+
+        .github-btn:hover {
+            background: #30363d;
+            border-color: #8b949e;
+            color: #fff;
+        }
+
+        
+        @media (max-width: 768px) {
+            .projects-grid { grid-template-columns: 1fr; } 
+            .page-header { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <a href="index.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+            Back to Home
+        </a>
+
+        <header class="page-header">
+            <div class="icon-main"><span class="material-icons">account_tree</span></div>
+            <div>
+                <h1>My Projects</h1>
+                <p>Documentation of my networking labs, security tools, and research.</p>
+            </div>
+        </header>
+
+        <nav class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-meta">
+                    <div class="project-icon"><span class="material-icons">router</span></div>
+                    <span class="project-category">Networking</span>
+                </div>
+                <h2>IPv6 Static Route</h2>
+                <span class="desc">
+                    A comprehensive lab documenting the configuration and verification of IPv6 Static Routing protocols. 
+                    Includes network topology diagrams and configuration steps.
+                </span>
+                <div class="project-actions">
+                    <a href="https://github.com/Rock-0xFF/IPv6_Static_Routing" target="_blank" class="action-btn github-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </article>
+
+            </nav>
+    </div>
+
+</body>
+</html>
