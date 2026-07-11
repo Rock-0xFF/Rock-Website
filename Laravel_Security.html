@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel | Architecture & Security</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --accent-color: #00ff9d;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 900px; margin: auto; }
+
+        /* شريط التنقل الجديد */
+        .nav-bar {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        header { margin-bottom: 40px; }
+        h1 { color: var(--accent-color); font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { color: var(--text-muted); }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h2 { color: var(--accent-color); font-size: 1.2rem; margin-top: 0; }
+        
+        .mvc-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+
+        .mvc-card {
+            background: #121212;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 15px; padding-left: 20px; position: relative; }
+        li::before { content: "▹"; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+        
+        code { background: #000; color: var(--accent-color); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- شريط التنقل هنا -->
+    <nav class="nav-bar">
+        <a href="../Blogs.html" class="nav-link">« Back to Blogs</a>
+        <a href="../index.html" class="nav-link">Home</a>
+    </nav>
+
+    <header>
+        <h1>Laravel Framework</h1>
+        <p class="subtitle">Architecture & Security Deep-Dive</p>
+    </header>
+
+    <div class="card">
+        <h2>About Laravel</h2>
+        <p>Laravel is a powerful, open-source PHP framework designed for web artisans. It is primarily used for <strong>Backend Development</strong>, providing a robust ecosystem to build scalable, secure, and maintainable web applications with elegant syntax.</p>
+    </div>
+
+    <div class="card">
+        <h2>The MVC Architecture</h2>
+        <p>Laravel follows the <strong>Model-View-Controller (MVC)</strong> pattern. This design separates logic from interface, ensuring a clean and manageable structure.</p>
+        
+        <div class="mvc-grid">
+            <div class="mvc-card">
+                <strong>Model</strong>
+                <p style="color:var(--text-muted); font-size: 0.9rem;">Handles data and database logic using <code>Eloquent ORM</code>.</p>
+            </div>
+            <div class="mvc-card">
+                <strong>View</strong>
+                <p style="color:var(--text-muted); font-size: 0.9rem;">The presentation layer using <code>Blade</code> templates.</p>
+            </div>
+            <div class="mvc-card">
+                <strong>Controller</strong>
+                <p style="color:var(--text-muted); font-size: 0.9rem;">The brain. Coordinates between Model and View.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Security Features</h2>
+        <ul>
+            <li><strong>CSRF Protection:</strong> Prevents unauthorized request forgery with secure tokens.</li>
+            <li><strong>SQL Injection Shield:</strong> Eloquent uses PDO parameter binding by default.</li>
+            <li><strong>XSS Protection:</strong> Blade automatically escapes outputs to prevent script injection.</li>
+            <li><strong>Authentication:</strong> Robust hashing using <code>Argon2</code> or <code>Bcrypt</code>.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
