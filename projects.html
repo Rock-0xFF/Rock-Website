@@ -185,6 +185,18 @@
             color: #fff;
         }
 
+        .linkedin-btn {
+            background: rgba(10, 102, 194, 0.1);
+            color: #58a6ff;
+            border: 1px solid rgba(10, 102, 194, 0.3);
+        }
+
+        .linkedin-btn:hover {
+            background: rgba(10, 102, 194, 0.2);
+            border-color: #58a6ff;
+            color: #fff;
+        }
+
         @media (max-width: 768px) {
             .projects-grid { grid-template-columns: 1fr; } 
             .page-header { flex-direction: column; text-align: center; }
@@ -209,6 +221,25 @@
 
         <nav class="projects-grid">
             
+            <!-- New Project: Rock-WeDoSolution Secure Infrastructure Lab -->
+            <article class="project-card">
+                <div class="project-meta">
+                    <div class="project-icon"><span class="material-icons">domain</span></div>
+                    <span class="project-category">Active Directory & System Administration</span>
+                </div>
+                <h2>Rock-WeDoSolution Secure Infrastructure Lab</h2>
+                <span class="desc">
+                    A hardened Windows Server enterprise lab featuring a two-server architecture (AD & DHCP/WSUS), 
+                    granular GPO security policies, BitLocker encryption, account lockout protection, and disaster recovery strategies.
+                </span>
+                <div class="project-actions">
+                    <a href="https://lnkd.in/p/dzDiW8nS" target="_blank" class="action-btn linkedin-btn">
+                        <span class="material-icons" style="font-size: 16px;">article</span>
+                        View on LinkedIn
+                    </a>
+                </div>
+            </article>
+
             <article class="project-card">
                 <div class="project-meta">
                     <div class="project-icon"><span class="material-icons">lan</span></div>
@@ -283,7 +314,7 @@
             <article class="project-card">
                 <div class="project-meta">
                     <div class="project-icon"><span class="material-icons">dns</span></div>
-                    <span class="project-category">Automation</span>
+                    <span class="project-category">Automation & Database</span>
                 </div>
                 <h2>NetWatch</h2>
                 <span class="desc">
